@@ -1,4 +1,4 @@
-package trilateralBasic;
+package trilateralHeapsBasic;
 
 import trilateral3.Trilateral;
 import trilateral3.drawing.Pen;
@@ -16,8 +16,8 @@ class AppHeaps extends hxd.App {
     var g:    h2d.Graphics; 
     override function init() {
         g = new h2d.Graphics( s2d );
-        width   = s2d.width, 
-        height  = s2d.height
+        width   = s2d.width;
+        height  = s2d.height;
         pen     = penNodule.pen;
         tri     = pen.colorTriangles;
         setup( g );
