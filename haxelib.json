@@ -1,0 +1,12 @@
+{
+    "name"         : "trilateralHeapsBasic",
+    "url"          : "https://github.com/TrilateralX/TrilateralHeapsBasic#TrilatelalHeapsBasic",
+    "license"      : "MIT",
+    "tags"         : ["cross", "drawing","2d","WebGL","heaps" ],
+    "description"  : "trilateralHeapsBasic starting point for quick Trilateral3 experiments",
+    "version"      : "0.0.1",
+    "releasenote"  : "See https://github.com/nanjizal/TrilateralHeapsBasic/blob/master/CHANGELOG.md",
+    "contributors" : ["Nanjizal"],
+    "classPath"    : "src",
+    "dependencies" : {}
+}
