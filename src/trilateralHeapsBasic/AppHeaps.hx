@@ -26,6 +26,7 @@ class AppHeaps extends hxd.App {
         draw( penNodule.pen );
         g.clear();
         for( i in 0...pen.size ){
+             tri.pos = i; // change the position.             
              g.beginFill( 0xffffff );
              // ignore z for now
              g.addVertex( tri.ax, tri.ay, tri.redA, tri.greenA, tri.blueA, tri.alphaA );
@@ -43,7 +44,9 @@ class AppHeaps extends hxd.App {
     override function update( dt: Float ) {
         drawRender( penNodule.pen );
         g.clear();
+        var currPos = tri.pos;
         for( i in 0...pen.size ){
+             tri.pos = i; // change the position.
              g.beginFill( 0xffffff );
              // ignore z for now
              g.addVertex( tri.ax, tri.ay, tri.redA, tri.greenA, tri.blueA, tri.alphaA );
@@ -51,6 +54,8 @@ class AppHeaps extends hxd.App {
              g.addVertex( tri.cx, tri.cy, tri.redC, tri.greenC, tri.blueC, tri.alphaC );
              g.endFill();
          } 
+         // reset pos afterwards probably not need
+         tri.pos = currPos;
     }
     // override
     public
