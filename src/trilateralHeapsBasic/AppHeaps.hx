@@ -15,6 +15,7 @@ class AppHeaps extends hxd.App {
     public var tri: FlatColorTriangles;
     var g:    h2d.Graphics; 
     override function init() {
+        engine.backgroundColor = 0xFF804020;
         g = new h2d.Graphics( s2d );
         width   = s2d.width;
         height  = s2d.height;
@@ -29,6 +30,7 @@ class AppHeaps extends hxd.App {
              tri.pos = i; // change the position.             
              g.beginFill( 0xffffff );
              // ignore z for now
+             //trace( tri.ax + ' ' + tri.ay + ' ' + tri.redA + ' ' + tri.greenA + ' ' + tri.blueA + ' ' + tri.alphaA );
              g.addVertex( tri.ax, tri.ay, tri.redA, tri.greenA, tri.blueA, tri.alphaA );
              g.addVertex( tri.bx, tri.by, tri.redB, tri.greenB, tri.blueB, tri.alphaB );
              g.addVertex( tri.cx, tri.cy, tri.redC, tri.greenC, tri.blueC, tri.alphaC );
