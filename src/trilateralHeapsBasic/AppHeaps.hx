@@ -9,7 +9,7 @@ import h2d.Graphics;
 // REQUIRES HAXE 4.2
 class AppHeaps extends hxd.App {
     public var pen: Pen;
-    public var penNodule = new HeapsG2Nodule(); // same as PenNodule without transform.
+    public var nodule = new HeapsG2Nodule(); // same as PenNodule without transform.
     public var width:  Int;
     public var height: Int;
     public var tri: FlatColorTriangles;
@@ -18,14 +18,14 @@ class AppHeaps extends hxd.App {
         g = new h2d.Graphics( s2d );
         width   = s2d.width;
         height  = s2d.height;
-        pen     = penNodule.pen;
-        tri     = pen.colorTriangles;
-        setup( g );
+        pen     = nodule.pen;
+        tri     = nodule.colorTriangles;
+        firstDraw();
     }
-    function setup(){
-        draw( penNodule.pen );
+    function firstDraw(){
+        draw( nodule.pen );
         g.clear();
-        for( i in 0...pen.size ){
+        for( i in 0...nodule.size ){
              g.beginFill( 0xffffff );
              // ignore z for now
              g.addVertex( tri.ax, tri.ay, tri.redA, tri.greenA, tri.blueA, tri.alphaA );
@@ -41,9 +41,9 @@ class AppHeaps extends hxd.App {
     }
     // override with empty if not needed.
     override function update( dt: Float ) {
-        drawRender( penNodule.pen );
+        drawRender( nodule.pen );
         g.clear();
-        for( i in 0...pen.size ){
+        for( i in 0...nodule.size ){
              g.beginFill( 0xffffff );
              // ignore z for now
              g.addVertex( tri.ax, tri.ay, tri.redA, tri.greenA, tri.blueA, tri.alphaA );
